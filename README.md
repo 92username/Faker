@@ -1,66 +1,86 @@
-# Gerador de Dados Falsos para Prototipagem
+# Gerador de Dados Simulados para Prototipagem com Faker
 
-Este projeto utiliza a biblioteca [Faker](https://faker.readthedocs.io/) para gerar dados falsos de clientes em um arquivo `.csv`. Ele é útil para prototipagem de sistemas que exigem dados simulados de pessoas físicas e jurídicas.
+Este repositório contém dois scripts em Python que utilizam a biblioteca [Faker](https://faker.readthedocs.io/) para gerar dados simulados em arquivos `.csv`. Esses dados são úteis para prototipagem de sistemas, especialmente na fase inicial de desenvolvimento.
 
-## Descrição do Código
+## Scripts
 
-Este script permite gerar um arquivo `.csv` com dados falsos de clientes. É possível configurar:
-- Nome do arquivo `.csv`.
-- Quantidade de clientes pessoa física.
-- Quantidade de clientes pessoa jurídica.
+1. **fakerclientes.py** - Gera uma lista de clientes simulados.
+2. **fakerestoque.py** - Gera um estoque simulado de produtos.
 
-Cada registro no arquivo contém as seguintes informações:
-- ID
-- Nome
-- Telefone
-- Endereço
-- Email
-- Notas (campo vazio para preenchimento posterior)
-- CPF (apenas para pessoas físicas)
-- CNPJ (apenas para pessoas jurídicas)
-- Cliente desde (mês e ano de entrada como cliente)
-- Pagamentos (mensal ou diária)
-- Pagamento em dia (em dia ou em atraso)
+### 1. fakerclientes.py
 
-## Como Usar
-Recomendado utilizar um ambiente virtual:
-```bash
-python -m venv venv
-source venv/bin/activate
-```
+Este script gera dados simulados de clientes, podendo incluir tanto pessoas físicas quanto pessoas jurídicas.
 
-1. **Instale as dependências**: Execute o comando abaixo para instalar a biblioteca Faker:
+#### Colunas no Arquivo `.csv`
+
+- **ID**: Identificação única de cada cliente.
+- **Nome**: Nome do cliente (ou nome da empresa para pessoas jurídicas).
+- **Telefone**: Número de telefone de contato.
+- **Endereço**: Endereço completo.
+- **Email**: Endereço de email.
+- **Notas**: Campo vazio para observações futuras.
+- **CPF**: Número de CPF (somente para pessoas físicas).
+- **CNPJ**: Número de CNPJ (somente para pessoas jurídicas).
+- **Cliente desde**: Data de entrada do cliente na empresa (formato MM-YYYY).
+- **Pagamentos**: Tipo de pagamento (mensal ou diária).
+- **Pagamento em dia**: Status do pagamento (em dia ou em atraso).
+
+#### Como Usar
+
+1. **Instale as dependências**:
    ```bash
    pip install Faker
    ```
-   
-2. **Execute o Script**: Rode o código com Python e siga as instruções para configurar o nome do arquivo e a quantidade de clientes.
+2. **Execute o script**:
    ```bash
    python fakerclientes.py
    ```
+3. **Siga as instruções** para inserir o nome do arquivo de saída e a quantidade de clientes a serem gerados.
 
-3. **Exemplo de Uso**:
-   - Nome do arquivo: `clientes.csv`
-   - Quantidade de Pessoas Físicas: 10
-   - Quantidade de Pessoas Jurídicas: 15
+### 2. fakerestoque.py
 
-4. **Output**:
-   - O arquivo `.csv` será salvo no diretório especificado com os dados gerados.
+Este script gera dados simulados para um estoque de produtos.
 
-## Estrutura do Arquivo `.csv`
+#### Colunas no Arquivo `.csv`
 
-| ID  | Nome            | Telefone         | Endereço                     | Email           | Notas | CPF       | CNPJ      | Cliente desde | Pagamentos | Pagamento em dia |
-|-----|------------------|------------------|------------------------------|-----------------|-------|-----------|-----------|---------------|------------|-------------------|
-| 1   | Nome Pessoa 1   | (99) 99999-9999  | Endereço Exemplo, 123, Cidade| exemplo@email.com |       | 123.456.789-09 |           | 01-2022      | mensal     | em dia            |
-| 2   | Empresa Exemplo | (99) 88888-8888  | Rua Exemplo, 456, Cidade     | empresa@email.com |       |           | 12.345.678/0001-90 | 02-2023      | diária     | em atraso         |
+- **ID**: Identificação única de cada produto.
+- **Nome do Produto**: Nome do produto.
+- **Categoria**: Categoria a qual o produto pertence.
+- **Quantidade em Estoque**: Quantidade disponível do produto.
+- **Preço (R$)**: Preço unitário do produto em reais.
+- **Data de Adição**: Data em que o produto foi adicionado ao estoque (formato DD-MM-YYYY).
+- **Fornecedor**: Nome do fornecedor.
 
-## Imagens
+#### Como Usar
 
-1. **Exemplo da saída do terminal após a execução**:
+1. **Instale as dependências**:
+   ```bash
+   pip install Faker
+   ```
+2. **Execute o script**:
+   ```bash
+   python fakerestoque.py
+   ```
+3. **Siga as instruções** para inserir o nome do arquivo de saída e a quantidade de produtos a serem gerados.
 
-  ![Terminal Output](terminaloutputfaker.png)
+## Exemplo de Saída
 
+1. **Exemplo da saída no terminal**:
+
+   ![Exemplo da saída no terminal](terminaloutputfaker.png)
 
 2. **Exemplo do arquivo `.csv` gerado**:
 
    ![Exemplo do arquivo CSV gerado](outputcsvfaker.png)
+
+## Estrutura do `.gitignore`
+
+O arquivo `.gitignore` está configurado para excluir arquivos de ambiente virtual (`.venv`), arquivos de lock temporários, e todos os arquivos `.csv`, garantindo que somente os scripts sejam enviados para o repositório.
+
+## Autor
+
+Desenvolvido por [92username](https://github.com/92username).
+
+---
+
+Esse README agora usa a palavra "simulados" para descrever os dados gerados. Se precisar de mais alguma modificação, é só avisar!
