@@ -15,12 +15,12 @@ Este script gera dados simulados de clientes, podendo incluir tanto pessoas fís
 
 - **ID**: Identificação única de cada cliente.
 - **Nome**: Nome do cliente (ou nome da empresa para pessoas jurídicas).
-- **Telefone**: Número de telefone de contato.
+- **Telefone**
 - **Endereço**: Endereço completo.
 - **Email**: Endereço de email.
 - **Notas**: Campo vazio para observações futuras.
-- **CPF**: Número de CPF (somente para pessoas físicas).
-- **CNPJ**: Número de CNPJ (somente para pessoas jurídicas).
+- **CPF**: Somente para pessoas físicas).
+- **CNPJ**: Somente para pessoas jurídicas).
 - **Cliente desde**: Data de entrada do cliente na empresa (formato MM-YYYY).
 - **Pagamentos**: Tipo de pagamento (mensal ou diária).
 - **Pagamento em dia**: Status do pagamento (em dia ou em atraso).
