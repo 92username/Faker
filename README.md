@@ -1,3 +1,4 @@
+[![Pylint](https://github.com/92username/Faker/actions/workflows/pylint.yml/badge.svg)](https://github.com/92username/Faker/actions/workflows/pylint.yml)
 # Gerador de Dados Simulados para Prototipagem com Faker
 
 Este repositório contém dois scripts em Python que utilizam a biblioteca [Faker](https://faker.readthedocs.io/) para gerar dados simulados em arquivos `.csv`. Esses dados são úteis para prototipagem de sistemas, especialmente na fase inicial de desenvolvimento.
