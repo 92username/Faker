@@ -81,6 +81,3 @@ O arquivo `.gitignore` está configurado para excluir arquivos de ambiente virtu
 
 Desenvolvido por [92username](https://github.com/92username).
 
----
-
-Esse README agora usa a palavra "simulados" para descrever os dados gerados. Se precisar de mais alguma modificação, é só avisar!
