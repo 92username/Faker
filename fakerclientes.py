@@ -5,7 +5,7 @@ from random import choice
 import os
 
 # Solicitar informações ao usuário
-output_file = input("Digite o nome do arquivo .csv (ex: clientes.csv): ")
+output_file = os.path.join("arquivos_csv", input("Digite o nome do arquivo .csv (ex: clientes.csv): "))
 NUM_PF = int(input("Quantidade de Pessoas Físicas a serem criadas: "))
 NUM_PJ = int(input("Quantidade de Pessoas Jurídicas a serem criadas: "))
 

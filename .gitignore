@@ -2,3 +2,4 @@
 .~lock.clientela.csv
 *.csv
 .~lock.estoqueteste.csv#
+/arquivos_csv/
