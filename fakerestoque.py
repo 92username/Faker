@@ -1,7 +1,52 @@
+"""
+Este script gera um arquivo CSV contendo uma lista fictícia de itens de estoque.
+
+O script solicita ao usuário o nome do arquivo CSV a ser gerado e a quantidade de itens fictícios a serem criados.
+Em seguida, ele gera dados aleatórios para cada item, incluindo ID do produto, nome, categoria, quantidade em estoque,
+preço unitário, valor agregado, data de aquisição, fornecedor, localização no armazém, número de série, status, data de validade e observações.
+
+Bibliotecas utilizadas:
+- csv: para manipulação de arquivos CSV.
+- random: para geração de valores aleatórios.
+- faker: para geração de dados fictícios.
+- os: para manipulação de caminhos de arquivos.
+
+Classes e funções:
+- Nenhuma classe ou função específica é definida neste script.
+
+Variáveis:
+- fake: instância da classe Faker para geração de dados fictícios.
+- produtos: lista de nomes de produtos.
+- categorias: lista de categorias de produtos.
+- status_opcoes: lista de status possíveis para os produtos.
+- output_file: nome do arquivo CSV fornecido pelo usuário.
+- num_itens: quantidade de itens fictícios a serem gerados, fornecida pelo usuário.
+- valor_total_estoque: variável para acumular o valor total do estoque.
+
+Fluxo do script:
+1. Solicita ao usuário o nome do arquivo CSV e a quantidade de itens a serem gerados.
+2. Inicializa a variável valor_total_estoque.
+3. Cria e escreve no arquivo CSV com os dados fictícios gerados.
+4. Exibe o caminho absoluto do arquivo gerado e o valor total do estoque.
+
+Como usar:
+1. Execute o script.
+2. Insira o nome do arquivo CSV quando solicitado.
+3. Insira a quantidade de itens fictícios a serem gerados.
+4. O script gerará o arquivo CSV com os dados fictícios e exibirá o caminho do arquivo e o valor total do estoque.
+
+Exemplo de uso:
+$ python fakerestoque.py
+Digite o nome do arquivo .csv (ex: estoque.csv): estoque.csv
+Quantidade de itens fictícios a serem criados: 10
+Arquivo 'estoque.csv' gerado com sucesso! Caminho: /caminho/para/estoque.csv
+Valor total do estoque: R$ 123456.78
+"""
 import csv
+import os
 import random
 from faker import Faker
-import os
+
 
 # Criar instância do Faker
 fake = Faker("pt_BR")
