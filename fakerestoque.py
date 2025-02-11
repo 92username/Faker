@@ -120,7 +120,7 @@ with open(output_file, mode="w", newline="", encoding="utf-8") as arquivo_csv:
                     start_date="-2y", end_date="today"
                 ),
                 "Fornecedor": fake.company(),
-                "Localização no Armazém": f"Seção {random.randint(1,10)} - Prateleira {random.randint(1,5)}",
+                "Localização": f"Seção {random.randint(1,10)} - Prateleira {random.randint(1,5)}",
                 "Número de Série": (
                     fake.unique.ean13()
                     if categoria == "Equipamentos Eletrônicos"
