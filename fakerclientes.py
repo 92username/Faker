@@ -1,9 +1,46 @@
-# cria um arquivo com dados falsos com output em formato csv
-import csv
-from faker import Faker
+"""
+Este script gera um arquivo CSV contendo dados fictícios de clientes, tanto pessoas físicas (PF) quanto pessoas jurídicas (PJ), utilizando a biblioteca Faker para gerar dados aleatórios.
+
+O script solicita ao usuário o nome do arquivo CSV a ser gerado, bem como a quantidade de pessoas físicas e jurídicas a serem criadas. Em seguida, ele gera os dados fictícios e os escreve no arquivo CSV especificado.
+
+Bibliotecas necessárias:
+- csv: Para manipulação de arquivos CSV.
+- faker: Para geração de dados fictícios.
+- random: Para seleção aleatória de opções.
+- os: Para manipulação de caminhos de arquivos.
+
+Fluxo do script:
+1. Solicita ao usuário o nome do arquivo CSV e as quantidades de PF e PJ.
+2. Cria uma instância do Faker com locale pt_BR para gerar dados em português.
+3. Gera dados fictícios para clientes PF e PJ.
+4. Escreve os dados gerados em um arquivo CSV.
+5. Exibe o caminho absoluto do arquivo gerado.
+
+Campos gerados para cada cliente:
+- ID: Identificador único do cliente.
+- Nome: Nome da pessoa física ou nome da empresa.
+- Telefone: Número de telefone.
+- Endereço: Endereço completo.
+- Email: Endereço de email.
+- Notas: Campo vazio para notas adicionais.
+- CPF: Número de CPF (apenas para PF).
+- CNPJ: Número de CNPJ (apenas para PJ).
+- Cliente desde: Data de início do cliente no formato MM-AAAA.
+- Pagamentos: Tipo de pagamento (mensal ou diária).
+- Pagamento em dia: Status do pagamento (em dia ou em atraso).
+
+Exemplo de uso:
+$ python fakerclientes.py
+Digite o nome do arquivo .csv (ex: clientes.csv): clientes.csv
+Quantidade de Pessoas Físicas a serem criadas: 10
+Quantidade de Pessoas Jurídicas a serem criadas: 5
+Arquivo 'clientes.csv' gerado com sucesso! Caminho: /caminho/absoluto/clientes.csv
+"""
+
 from random import choice
 import os
-
+import csv
+from faker import Faker
 # Solicitar informações ao usuário
 output_file = os.path.join(
     "arquivos_csv", input("Digite o nome do arquivo .csv (ex: clientes.csv): ")
