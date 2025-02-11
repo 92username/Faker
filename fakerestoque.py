@@ -1,9 +1,11 @@
 """
 Este script gera um arquivo CSV contendo uma lista fictícia de itens de estoque.
 
-O script solicita ao usuário o nome do arquivo CSV a ser gerado e a quantidade de itens fictícios a serem criados.
-Em seguida, ele gera dados aleatórios para cada item, incluindo ID do produto, nome, categoria, quantidade em estoque,
-preço unitário, valor agregado, data de aquisição, fornecedor, localização no armazém, número de série, status, data de validade e observações.
+O script solicita ao usuário o nome do arquivo CSV a ser gerado e a quantidade 
+de itens fictícios a serem criados.  Em seguida, ele gera dados aleatórios para
+ cada item, incluindo ID do produto, nome, categoria, quantidade em estoque,
+preço unitário, valor agregado, data de aquisição, fornecedor, localização no 
+armazém, número de série, status, data de validade e observações.
 
 Bibliotecas utilizadas:
 - csv: para manipulação de arquivos CSV.
@@ -33,7 +35,8 @@ Como usar:
 1. Execute o script.
 2. Insira o nome do arquivo CSV quando solicitado.
 3. Insira a quantidade de itens fictícios a serem gerados.
-4. O script gerará o arquivo CSV com os dados fictícios e exibirá o caminho do arquivo e o valor total do estoque.
+4. O script gerará o arquivo CSV com os dados fictícios e exibirá o caminho do 
+arquivo e o valor total do estoque.
 
 Exemplo de uso:
 $ python fakerestoque.py
@@ -72,7 +75,7 @@ output_file = input("Digite o nome do arquivo .csv (ex: estoque.csv): ")
 num_itens = int(input("Quantidade de itens fictícios a serem criados: "))
 
 # Inicializar variável para acumular o valor total do estoque
-valor_total_estoque = 0
+VALOR_TOTAL_ESTOQUE = 0
 
 # Criar e escrever no arquivo CSV
 with open(output_file, mode="w", newline="", encoding="utf-8") as arquivo_csv:
@@ -102,7 +105,7 @@ with open(output_file, mode="w", newline="", encoding="utf-8") as arquivo_csv:
         quantidade = random.randint(1, 50)
         preco_unitario = round(random.uniform(100.0, 10000.0), 2)
         valor_agregado = quantidade * preco_unitario
-        valor_total_estoque += (
+        VALOR_TOTAL_ESTOQUE += (
             valor_agregado  # Acumular o valor agregado no valor total do estoque
         )
         escritor.writerow(
@@ -136,4 +139,4 @@ with open(output_file, mode="w", newline="", encoding="utf-8") as arquivo_csv:
 # Obter o caminho absoluto do arquivo salvo
 file_path = os.path.abspath(output_file)
 print(f"Arquivo '{output_file}' gerado com sucesso! Caminho: {file_path}")
-print(f"Valor total do estoque: R$ {round(valor_total_estoque, 2)}")
+print(f"Valor total do estoque: R$ {round(VALOR_TOTAL_ESTOQUE, 2)}")
