@@ -1,7 +1,11 @@
 """
-Este script gera um arquivo CSV contendo dados fictícios de clientes, tanto pessoas físicas (PF) quanto pessoas jurídicas (PJ), utilizando a biblioteca Faker para gerar dados aleatórios.
+Este script gera um arquivo CSV contendo dados fictícios de clientes, tanto 
+pessoas físicas (PF) quanto pessoas jurídicas (PJ), utilizando a biblioteca 
+Faker para gerar dados aleatórios.
 
-O script solicita ao usuário o nome do arquivo CSV a ser gerado, bem como a quantidade de pessoas físicas e jurídicas a serem criadas. Em seguida, ele gera os dados fictícios e os escreve no arquivo CSV especificado.
+O script solicita ao usuário o nome do arquivo CSV a ser gerado, bem como a 
+quantidade de pessoas físicas e jurídicas a serem criadas. Em seguida, ele gera
+os dados fictícios e os escreve no arquivo CSV especificado.
 
 Bibliotecas necessárias:
 - csv: Para manipulação de arquivos CSV.
@@ -18,15 +22,7 @@ Fluxo do script:
 
 Campos gerados para cada cliente:
 - ID: Identificador único do cliente.
-- Nome: Nome da pessoa física ou nome da empresa.
-- Telefone: Número de telefone.
-- Endereço: Endereço completo.
-- Email: Endereço de email.
-- Notas: Campo vazio para notas adicionais.
-- CPF: Número de CPF (apenas para PF).
-- CNPJ: Número de CNPJ (apenas para PJ).
-- Cliente desde: Data de início do cliente no formato MM-AAAA.
-- Pagamentos: Tipo de pagamento (mensal ou diária).
+- Nome: Nome da pessoa física
 - Pagamento em dia: Status do pagamento (em dia ou em atraso).
 
 Exemplo de uso:
@@ -37,10 +33,11 @@ Quantidade de Pessoas Jurídicas a serem criadas: 5
 Arquivo 'clientes.csv' gerado com sucesso! Caminho: /caminho/absoluto/clientes.csv
 """
 
-from random import choice
-import os
 import csv
 from faker import Faker
+from random import choice
+import os
+
 # Solicitar informações ao usuário
 output_file = os.path.join(
     "arquivos_csv", input("Digite o nome do arquivo .csv (ex: clientes.csv): ")
