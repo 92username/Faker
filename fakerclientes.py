@@ -34,9 +34,10 @@ Arquivo 'clientes.csv' gerado com sucesso! Caminho: /caminho/absoluto/clientes.c
 """
 
 import csv
-from faker import Faker
-from random import choice
 import os
+from random import choice
+from faker import Faker
+
 
 # Solicitar informações ao usuário
 output_file = os.path.join(
