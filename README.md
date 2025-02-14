@@ -74,11 +74,4 @@ Este script gera dados simulados para um estoque de produtos.
 
    ![Exemplo do arquivo CSV gerado](outputcsvfaker.png)
 
-## Estrutura do `.gitignore`
-
-O arquivo `.gitignore` está configurado para excluir arquivos de ambiente virtual (`.venv`), arquivos de lock temporários, e todos os arquivos `.csv`, garantindo que somente os scripts sejam enviados para o repositório.
-
-## Autor
-
-Desenvolvido por [92username](https://github.com/92username).
 
